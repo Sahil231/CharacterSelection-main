@@ -28,6 +28,8 @@ public class TankView : MonoBehaviour
         if(rotation!=0)
             _tankController.Rotate(rotation,_tankController.GetRotationSpeed());
 
+        ColorTheTank(_tankController.GetTankColor());
+
     }
     public void SetTankController(TankController _tankController)
     {

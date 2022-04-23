@@ -42,4 +42,9 @@ public class TankController
         return _tankModel.GetRotationSpeed();
     }
 
+    public Material GetTankColor()
+    {
+        return _tankModel.GetColor();
+    }
+
 }
