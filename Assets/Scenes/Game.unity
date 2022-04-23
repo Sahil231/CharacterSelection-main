@@ -150,9 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fef2bab333b7e4f9eaa5e13d782b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankPrefab: {fileID: 3510634917980824190, guid: c96478d6cb4de9f4d9d0af4ca5992496,
+  tankView: {fileID: 5536537151287103815, guid: c96478d6cb4de9f4d9d0af4ca5992496,
     type: 3}
-  camera: {fileID: 1179543937}
 --- !u!4 &146925549
 Transform:
   m_ObjectHideFlags: 0

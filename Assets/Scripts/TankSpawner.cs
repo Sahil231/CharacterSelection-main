@@ -5,7 +5,6 @@ using UnityEngine;
 public class TankSpawner : MonoBehaviour
 {
     public TankView tankView;
-    public GameObject camera;
 
     void Start()
     {
@@ -14,7 +13,7 @@ public class TankSpawner : MonoBehaviour
 
     private void CreateTank()
     {
-        TankModel tankModel = new TankModel();
+        TankModel tankModel = new TankModel(30, 30);
         TankController tankController = new TankController(tankView,tankModel);
     }
 }
