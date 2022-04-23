@@ -207,6 +207,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 885692827635279829}
+  cam: {fileID: 0}
+  tankPartsColor:
+  - {fileID: 2826584864240374856}
+  - {fileID: 554073292548296175}
+  - {fileID: 8067186419079366497}
+  - {fileID: 5992722440104740987}
 --- !u!54 &885692827635279829
 Rigidbody:
   m_ObjectHideFlags: 0

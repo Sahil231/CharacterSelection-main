@@ -11,6 +11,8 @@ public class TankView : MonoBehaviour
     float movement;
     float rotation;
 
+    public MeshRenderer[] tankPartsColor;
+
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
@@ -22,9 +24,9 @@ public class TankView : MonoBehaviour
         rotation=Input.GetAxis("Horizontal");
 
         if(movement!=0)
-            _tankController.Move(movement,30);
+            _tankController.Move(movement,_tankController.GetMovementSpeed());
         if(rotation!=0)
-            _tankController.Rotate(rotation,100);
+            _tankController.Rotate(rotation,_tankController.GetRotationSpeed());
 
     }
     public void SetTankController(TankController _tankController)
@@ -35,5 +37,13 @@ public class TankView : MonoBehaviour
     public Rigidbody GetRigidbody()
     {
         return rb;
+    }
+
+    public void ColorTheTank(Material color)
+    {
+        for(int i=0; i<tankPartsColor.Length; i++)
+        {
+            tankPartsColor[i].material= color;
+        }
     }
 }

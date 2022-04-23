@@ -17,7 +17,8 @@ public class TankController
 
         this._tankView.SetTankController(this);
         this._tankModel.SetTankController(this);
-        
+
+        _tankView.ColorTheTank(_tankModel.GetColor());
         
     }
 
@@ -29,6 +30,16 @@ public class TankController
     public void Rotate(float rotate , float rotateSpeed)
     {
         rb.MoveRotation(rb.rotation * Quaternion.Euler( new Vector3(0, rotateSpeed * rotate * Time.deltaTime, 0)));
+    }
+
+    public float GetMovementSpeed()
+    {
+        return _tankModel.GetMovementSpeed();
+    }
+
+    public float GetRotationSpeed()
+    {
+        return _tankModel.GetRotationSpeed();
     }
 
 }
